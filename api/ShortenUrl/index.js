@@ -1,10 +1,12 @@
-const { v4: uuidv4 } = require('uuid');
-
 const urls = new Map();
+
+function generateShortId() {
+    return new Date().getTime().toString(36);
+}
 
 module.exports = async function (context, req) {
     const { longUrl } = req.body;
-    const shortId = uuidv4().substring(0, 7);
+    const shortId = generateShortId();
     urls.set(shortId, longUrl);
 
     context.res = {

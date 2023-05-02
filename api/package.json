@@ -6,10 +6,7 @@
     "start": "func start",
     "test": "echo \"No tests yet...\""
   },
-  "dependencies": {
-    "uuid": "^9.0.0",
-    "uuidv4": "^6.2.13"
-  },
+
   "devDependencies": {
     "azure-functions-core-tools": "^4.x"
   }
