@@ -1,5 +1,3 @@
-const { v4: uuidv4 } = require('uuid');
-
 const urls = new Map();
 
 module.exports = async function (context, req) {
@@ -21,4 +19,3 @@ module.exports = async function (context, req) {
         };
     }
 };
-
