@@ -18,7 +18,8 @@
         const response = await fetch(shortenUrlEndpoint, {
             method: 'POST',
             headers: {
-                'Content-Type': 'application/json'
+                'Content-Type': 'application/json',
+                'x-functions-key': 'LFlHBwNN0WE17rp3QBhoVwGdMSekLhRZlObBAbtJNnRPAzFuRz2U-w=='
             },
             body: JSON.stringify({ longUrl })
         });
