@@ -6,7 +6,8 @@
       "direction": "in",
       "name": "req",
       "methods": ["post"],
-      "route": "shortenurl"
+      "route": "shortenurl",
+      "cors": "https://delightful-tree-09b553f03.3.azurestaticapps.net"
     },
     {
       "type": "http",
