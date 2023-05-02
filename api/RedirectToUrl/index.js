@@ -12,13 +12,13 @@ module.exports = async function (context, req) {
             headers: {
                 'Location': longUrl
             },
-
             body: {}
-    };
-} else {
-    context.res = {
-        status: 404,
-        body: 'URL not found'
-    };
-}
+        };
+    } else {
+        context.res = {
+            status: 404,
+            body: 'URL not found'
+        };
+    }
 };
+

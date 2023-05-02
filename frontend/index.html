@@ -12,9 +12,10 @@
 <p id="result"></p>
 
 <script>
+    const shortenUrlEndpoint = "https://Urlshorthenerfunc.azurewebsites.net/api/ShortenUrl";
     async function shortenUrl() {
         const longUrl = document.getElementById('longUrl').value;
-        const response = await fetch('/api/shortenurl', {
+        const response = await fetch(shortenUrlEndpoint, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
