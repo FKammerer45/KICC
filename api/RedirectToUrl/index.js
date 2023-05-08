@@ -1,5 +1,7 @@
 module.exports = async function (context, req) {
+    const shortId = req.params.shortId;
     const longUrl = context.bindings.urlMapping?.LongUrl;
+
 
     if (longUrl) {
         context.res = {

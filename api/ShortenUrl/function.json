@@ -1,11 +1,13 @@
 {
   "bindings": [
     {
-      "authLevel": "function",
+      "authLevel": "anonymous",
       "type": "httpTrigger",
       "direction": "in",
       "name": "req",
-      "methods": ["post"],
+      "methods": [
+        "post"
+      ],
       "route": "shortenurl"
     },
     {
@@ -15,11 +17,10 @@
     },
     {
       "type": "table",
-      "name": "outputTable",
+      "name": "tableBinding",
       "tableName": "UrlMappings",
       "connection": "AzureWebJobsStorage",
       "direction": "out"
     }
-
   ]
 }
