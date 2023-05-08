@@ -12,6 +12,14 @@
       "type": "http",
       "direction": "out",
       "name": "res"
+    },
+    {
+      "type": "table",
+      "name": "outputTable",
+      "tableName": "UrlMappings",
+      "connection": "AzureWebJobsStorage",
+      "direction": "out"
     }
+
   ]
 }

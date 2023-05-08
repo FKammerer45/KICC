@@ -1,8 +1,5 @@
-const urls = new Map();
-//update
 module.exports = async function (context, req) {
-    const { id } = context.bindingData;
-    const longUrl = urls.get(id);
+    const longUrl = context.bindings.urlMapping?.LongUrl;
 
     if (longUrl) {
         context.res = {

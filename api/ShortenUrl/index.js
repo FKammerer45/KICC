@@ -1,13 +1,14 @@
-const urls = new Map();
-//update
-function generateShortId() {
-    return new Date().getTime().toString(36);
-}
-
 module.exports = async function (context, req) {
     const { longUrl } = req.body;
-    const shortId = generateShortId();
-    urls.set(shortId, longUrl);
+    const shortId = Math.random().toString(36).substr(2, 7);
+
+    console.log(`PartitionKey: URLs, RowKey: ${shortId}, LongUrl: ${longUrl}`);
+
+    context.bindings.outputTable = {
+        PartitionKey: "URLs",
+        RowKey: shortId,
+        LongUrl: longUrl
+    };
 
     context.res = {
         status: 200,
