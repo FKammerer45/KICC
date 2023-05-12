@@ -12,12 +12,7 @@ module.exports = async function (context, req) {
 
     const shortId = Math.random().toString(36).substring(2, 7);
     context.log(`Generated shortId: ${shortId}`);
-    context.log(`longurl: ${longUrl}`);
 
-    context.log('Preparing outputTable bindings');
-    context.log(`PartitionKey: URLs`);
-    context.log(`RowKey: ${shortId}`);
-    context.log(`LongUrl: ${longUrl}`);
 
     context.bindings.tableBinding = [];
 
