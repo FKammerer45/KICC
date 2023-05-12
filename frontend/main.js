@@ -15,7 +15,7 @@ const msalConfig = {
 
 const msalInstance = new PublicClientApplication(msalConfig);
 
-export async function signIn() {
+async function signIn() {
     try {
         const loginRequest = {
             scopes: ["openid", "profile"],
