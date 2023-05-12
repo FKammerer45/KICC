@@ -1,4 +1,5 @@
 import { PublicClientApplication } from "@azure/msal-browser";
+window.signIn = signIn;
 
 const msalConfig = {
     auth: {
