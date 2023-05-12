@@ -6,7 +6,7 @@ const msalConfig = {
         clientId: "7d5ec8bc-11f1-45b8-be26-222be601da4d",
         authority: "https://urlshortenerkicc.b2clogin.com/urlshortenerkicc.onmicrosoft.com/B2C_1_urlshortenerlogin",
         knownAuthorities: ["urlshortenerkicc.b2clogin.com"],
-        redirectUri: "1 web, 0 spa, 0 public client",
+        redirectUri: "https://delightful-tree-09b553f03.3.azurestaticapps.net/",
     },
     cache: {
         cacheLocation: "localStorage",
