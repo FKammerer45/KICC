@@ -25,7 +25,7 @@ jobs:
           node-version: 16
 
       - name: Install dependencies
-        run: npm ci
+        run: npm install --prefer-offline --no-audit
 
       - name: Install Parcel globally
         run: npm install -g parcel
