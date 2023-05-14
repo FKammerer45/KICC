@@ -12,7 +12,7 @@
 <button onclick="shortenUrl()">Shorten URL</button>
 <p id="result"></p>
 
-<script type="text/javascript" src="https://alcdn.msauth.net/lib/1.1.3/js/msal.min.js"></script>
+<script type="text/javascript" src="https://alcdn.msauth.net/lib/1.1.3/js/msal.min.js" onload="initMsal()"></script>
 
 
 <button onclick="signIn()">Sign In</button>
@@ -40,6 +40,7 @@
     }
 </script>
 <script>
+    function initMsal() {
     const { PublicClientApplication } = msal;
 
     const msalConfig = {
@@ -92,6 +93,7 @@
         console.log("API response:", data);
     }
     window.signIn = signIn;
+    }
 </script>
 </body>
 </html>
