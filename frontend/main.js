@@ -1,6 +1,6 @@
 // main.js
-(async () => {
-    const { PublicClientApplication } = await import("https://alcdn.msauth.net/browser/2.0.0/js/msal-browser.module.min.js");
+
+    const { PublicClientApplication } = msal;
 
     const msalConfig = {
         auth: {
@@ -52,5 +52,5 @@
         console.log("API response:", data);
     }
     window.signIn = signIn;
-})();
+
 
