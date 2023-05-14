@@ -31,9 +31,6 @@ jobs:
       - name: Install Parcel globally
         run: npm install -g parcel
 
-      - name: Clear Parcel cache
-        run: parcel cache clear
-
       - name: Build
         run: parcel build index.html --dist-dir dist
         working-directory: frontend
