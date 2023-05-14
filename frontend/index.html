@@ -15,7 +15,11 @@
 
 
 
-<script src="https://alcdn.msauth.net/browser/2.0.0/js/msal-browser.min.js" integrity="sha384-6w6awz6HvZgzdUoaG569f6Vy/DCp+Mw77zPWo6x56ymrTd1YGvwNQ5QFnc3GqfOc5" crossorigin="anonymous"></script>
+<script type="module">
+    import * as msal from "https://alcdn.msauth.net/browser/2.0.0/js/msal-browser.module.min.js";
+    window.msal = msal;
+</script>
+
 <script type="module" src="main.js"></script>
 <button onclick="import('./main.js').then(module => module.signIn())">Sign In</button>
 
