@@ -1,5 +1,7 @@
 // main.js
-import("https://alcdn.msauth.net/browser/2.0.0/js/msal-browser.module.min.js").then(async ({ PublicClientApplication }) => {
+(async () => {
+    const { PublicClientApplication } = await import("https://alcdn.msauth.net/browser/2.0.0/js/msal-browser.module.min.js");
+
     const msalConfig = {
         auth: {
             clientId: "7d5ec8bc-11f1-45b8-be26-222be601da4d",
@@ -26,7 +28,6 @@ import("https://alcdn.msauth.net/browser/2.0.0/js/msal-browser.module.min.js").t
             console.error("Error during login:", error);
         }
     }
-
     async function acquireToken() {
         try {
             const tokenRequest = {
@@ -50,6 +51,6 @@ import("https://alcdn.msauth.net/browser/2.0.0/js/msal-browser.module.min.js").t
         const data = await response.json();
         console.log("API response:", data);
     }
-
     window.signIn = signIn;
-});
+})();
+
