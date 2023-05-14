@@ -30,9 +30,11 @@ jobs:
 
       - name: Install Parcel globally
         run: npm install -g parcel
+        working-directory: frontend
 
       - name: Build
         run: parcel build frontend/index.html --dist-dir frontend/dist
+        working-directory: frontend
 
       - name: Build And Deploy
         id: builddeploy
