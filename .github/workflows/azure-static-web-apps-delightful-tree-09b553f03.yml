@@ -28,12 +28,12 @@ jobs:
         run: npm install --prefer-offline --no-audit
         working-directory: frontend
 
-      - name: Install Parcel globally
-        run: npm install -g parcel
+     # - name: Install Parcel globally
+      #  run: npm install -g parcel
 
-      - name: Build
-        run: parcel build index.html --dist-dir dist
-        working-directory: frontend
+     # - name: Build
+     #   run: parcel build index.html --dist-dir dist
+     #   working-directory: frontend
 
       - name: Build And Deploy
         id: builddeploy
