@@ -18,7 +18,14 @@
 
 <script type="text/javascript" src="https://alcdn.msauth.net/lib/1.1.3/js/msal.min.js"></script>
 
-<script type="module" src="main.js"></script>
+<script>
+    async function loadMain() {
+        const module = await import('./main.js');
+        module.init();
+    }
+
+    loadMain();
+</script>
 <button onclick="signIn()">Sign In</button>
 
 

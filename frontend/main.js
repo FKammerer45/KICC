@@ -1,5 +1,5 @@
 // main.js
-
+export async function init() {
     const { PublicClientApplication } = msal;
 
     const msalConfig = {
@@ -52,5 +52,5 @@
         console.log("API response:", data);
     }
     window.signIn = signIn;
-
+}
 
